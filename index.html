@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <title>Games</title>
+</head>
+<body>
+
+    <div id="tela-classe">
+        <h2 class="Selecao">Escolha sua classe</h2>
+        <ul class="personagensM">
+            <li>
+                <button class="card" id="cavaleiro"> 
+                    <img src="./src/imagens/cavaleiro.png" alt="Cavaleiro">
+                    <div class="descricao">
+                        <p>Cavaleiros, conhecidos por suas habilidades de combate e bondade com os cidadões, geralmente são o retrato de lealdade que inspiram a população. Possuem mais força e resistência que os demais devido ao seu rigoroso treinamento.</p>
+                    </div>
+                </button>
+
+                <button class="card" id="arqueiro" disabled>
+                    <img src="./src/imagens/arqueiro.png" alt="arqueiro">
+                    <div class="descricao">
+                        <h3>Bloqueado</h3>
+                    </div>
+                </button>
+
+                <button class="card" id="bardo" disabled>
+                    <img src="./src/imagens/bardo.png" alt="bardo">
+                    <div class="descricao">
+                        <h3>Bloqueado</h3>
+                    </div>
+                </button>
+
+                <button class="card" id="mago" disabled>
+                    <img src="./src/imagens/mago.png" alt="mago">
+                    <div class="descricao">
+                        <h3>Bloqueado</h3>
+                    </div>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+
+    <div id="menuNome" style="display:none;" class="menu-nome">
+        <h2>Escolha um nome para o personagem</h2>
+        <input type="text" id="inputNome" placeholder="Digite seu nome...">
+        <button id="btnConfirmarNome">Confirmar</button>
+    </div>
+
+
+
+
+    <div id="tela-jogo" style="display:none;">
+        <div id="background"></div>
+        <div id="app">
+            <div id="dialogoContainer"></div>
+            <div id="escolhasContainer"></div>
+        </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+
+</body>
+</html>

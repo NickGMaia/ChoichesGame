@@ -1,0 +1,228 @@
+body{
+    background-image: url("./imagens/menu.png");
+    background-size: cover;
+    background-position: center;
+    min-width: 100vh;
+    min-height: 100vh;
+    display: grid;
+    align-items: end;
+    margin: 0;
+    padding: 20px;
+    /* Faz com que o padding e a borda sejam contados DENTRO da altura total do elemento,evitando que ele ultrapasse 100vh. */
+    box-sizing: border-box;
+
+}
+ul li{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+#tela-classe {
+    position: relative; /* referência */
+}
+.Selecao {
+    position: absolute;
+    top: -20rem;
+    left: 50%;   /* centraliza horizontalmente */
+    transform: translateX(-50%); /* corrige centralização */
+    font-family: 'Cinzel', serif; /* fonte medieval/fantasia */
+    font-size: 48px;
+    text-align: center;
+    color: #f5e6c8; /* tom dourado claro */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* sombra para destacar do fundo */
+    margin-bottom: 40px;
+    letter-spacing: 3px; /* espaçamento entre letras */
+    border-bottom: 2px solid rgba(255, 215, 0, 0.6); /* linha decorativa */
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.4); /* leve fundo translúcido */
+    border-radius: 10px;
+}
+
+
+/* ===== TAMANHO DOS CARS E BUTTON ===== */
+
+
+.personagensM{
+    width: 80%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-self: center;
+}
+.personagensM button{
+    width: 15%;
+    height:100%;
+    padding: 0;
+    border: 2px solid rgba(139, 119, 5, 0.808);
+    background-color: transparent;
+    border-radius: 10px;overflow: hidden;
+    
+}
+.personagensM #cavaleiro{
+    cursor: pointer;
+}
+
+
+.personagensM #arqueiro, #bardo, #mago{
+    cursor: not-allowed;
+}
+
+
+
+
+/* ===== ESTILOS DO CARD===== */
+.card {
+    position: relative; /* O botão agora é o contêiner de referência! */
+    
+    width: 100%;
+    display: block;
+    aspect-ratio: 2 / 3;
+    padding: 0;
+    border: 2px solid #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== ESTILO DA DESCRIÇÃO ===== */
+.card .descricao {
+    /* Posicionamento absoluto em relação ao .card */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura do card */
+
+    /* Aparência */
+    background: rgba(53, 51, 36, 0.678);
+    color: rgba(202, 202, 202, 0.904);
+    padding: 15px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    font-size: 1rem;
+    font-family: 'Cinzel', serif;
+    line-height: 20px;
+    align-content: center;
+
+    
+    /* Animação */
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease-in-out;
+}
+
+/* ===== EFEITO HOVER NO BOTÃO ===== */
+.card:hover .descricao {
+    height: 100%;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== MENU NOME===== */
+
+.menu-nome {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-color: #222;
+    color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    z-index: 1000;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+}
+
+.menu-nome #inputNome{
+    border-radius: 10px;    
+    height: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.menu-nome button{
+    border-radius: 10px;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+}
+
+
+
+
+#escolhasContainer {
+    display: flex;
+    text-align: center;
+    bottom: 50px;
+    
+    position: absolute;
+    top: 25rem; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.botao-escolha {
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #E0E0E0; /* Cor do texto */
+    background-color: #2a2a2a; /* Fundo escuro */
+    border: 1px solid #666; /* Borda para dar contraste */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    z-index: 10;
+}
+
+.botao-escolha:hover {
+    background-color: #4a4a4a;
+    border-color: #999;
+}
+
+#tela-jogo #dialogoContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    color: #f5e6c8; 
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    margin-bottom: 40px;
+    z-index: 1000;
+    letter-spacing: 3px;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.6); 
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;       /* ajusta a imagem */
+    background-position: center;  /* centraliza */
+    z-index: -1;                  /* fica atrás do diálogo */
+}

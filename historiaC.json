@@ -1,0 +1,40 @@
+{
+    "inicio":{
+
+        "fundo": "./src/imagens/vila.png",
+        "falas":[
+            "O sol nasce sobre Elenmor, um vilarejo cercado por campos dourados e florestas densas.", 
+            "{{nome}}, um menino de 15 anos, ajuda seu pai me sua oficina",
+            "Seu pai tinha um forja onde ele e seus funcionarios faziam as ferramentas para os aldeões",
+            "Apesar de seu trabalho envolver ferramentas agricolas, o amor dele estava nas espadas",
+            "Criar armas capazes de cortar qualquer coisa é o que ele gostava de fazer",
+            "Mas nem sempre podemos fazer o que queremos...",
+            "",
+            "Apos passar a tarde ajudando seu pai na forja",
+            "Sua mãe o chama para o jantar, e acaba vendo manchas de carvão e marcas de queimdauras devido a fornalha",
+            "Ao inves de brigas com ele ou com seu pai, ela apenas esrica sua mão", 
+            "E de lá uma luz começa a sair dela, um brilho quente e acolhedor",
+            "Esse brilho é o que chamam de mágia de cura", 
+            "Por cauda dessa habilidade ela trabalhava como curandeira em um posto da vila", 
+            "Sempre dando os primeiros socorros para quem precisasse."
+        ],
+        "escolhas": [
+    {
+    "texto": "Avançar para o Ato 1",
+    "proxima": "ATO 1"
+    }
+]
+    }, 
+
+    "ATO 1":{
+        "fundo": "./src/imagens/jantar.png",
+        "falas":[
+            "{{nome}}: O que tem para comer hoje, mãe?",
+            "Mãe: como hoje não tinha muitas coisas da feira consgui apenas alguns legumes",
+            "Então vou ter que preparar uma sopa com eles para nós", 
+            "E antes que você reclame de algo, sim, você vai comer a sopa mesmo que não goste, pois precisa de alimentar",
+            "{{nome}}: Eu não tenho nenhuma escolha?",
+            "Mãe: Não!"
+        ]
+    }
+}
